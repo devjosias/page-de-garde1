@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Page de Garde</title>
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #004B70;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Logo avec taille originale sans provoquer de scroll */
+        .top-bar img {
+            /* max-width: 100%; */
+            height: auto;
+        }
+
+        .main-container {
+            margin-top: 40px;
+            background: linear-gradient(to right, rgba(255,255,255,0.08), rgba(255,255,255,0.15));
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        /* Carrousel taille identique pour toutes les images */
+        .carousel-box {
+            height: 300px;          /* hauteur fixe */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;      /* garantit taille identique */
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(4px);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .form-row-custom {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .label-custom {
+            width: 40%;
+            font-weight: 600;
+            color: #004B70;
+        }
+
+        .form-line {
+            width: 60%;
+            border: none;
+            border-bottom: 2px solid #008060;
+            background: transparent;
+            outline: none;
+            padding: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .form-row-custom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .label-custom, .form-line {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bande supérieure -->
+    <div class="container-fluid top-bar">
+        <div class="row align-items-center">
+            <div class="col-1">
+                <img src="logo-mairie-miniature-1707905764.png">
+            </div>
+            <div class="col-11"></div>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="container main-container">
+
+        <div class="row g-4">
+
+            <!-- Colonne carrousel -->
+            <div class="col-md-5">
+                <div class="carousel-box">
+
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="A.jpeg">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="B.jpeg">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="C.jpeg">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne formulaire -->
+            <div class="col-md-7">
+                <div class="form-box w-100">
+
+                    <form>
+
+                        <div class="form-row-custom">
+                            <label class="label-custom">Nom d'utilisateur</label>
+                            <input type="text" class="form-line" placeholder="Nom d'utilisateur">
+                        </div>
+
+                        <div class="form-row-custom">
+                            <label class="label-custom">Mot de passe</label>
+                            <input type="password" class="form-line" placeholder="Mot de passe">
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-success px-5 py-2 rounded-pill">
+                                Se connecter
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
